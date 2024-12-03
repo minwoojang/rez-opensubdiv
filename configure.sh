@@ -45,10 +45,13 @@ cmake \
     -DCMAKE_CXX_FLAGS="-fPIC" \
     -DNO_CUDA=1 \
     -DNO_OPENCL=1 \
+    -DUSE_OPENGL=ON \
+    -DUSE_GLSL=ON \
     -DGLFW_LOCATION=${REZ_GLFW_ROOT} \
     -DPTEX_LOCATION=${REZ_PTEX_ROOT} \
     -DTBB_LOCATION=${REZ_TBB_ROOT} \
-    -DZLIB_ROOT=${REZ_ZLIB_ROOT}
+    -DZLIB_ROOT=${REZ_ZLIB_ROOT} \
+    -DCMAKE_BUILD_TYPE=Release
 echo -e "\n"
 echo -e "[CONFIGURE] Finished configuring OpenSubdiv-${OPENSUBDIV_VERSION}!"
 echo -e "\n"
